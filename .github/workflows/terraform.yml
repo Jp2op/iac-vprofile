@@ -55,5 +55,5 @@ jobs:
           continue-on-error: true
 
         - name: Terrform plan status
-          id: steps.plan.outcome=='failure'
+          if: steps.plan.outcome == 'failure'
           run: exit 1     
